@@ -1,0 +1,257 @@
+{
+  "days": [
+    {
+      "id": "1",
+      "name": "Maanantai",
+      "lessons": [
+        {
+          "id": 0,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "10:30",
+          "end": "11:45"
+        },
+        {
+          "id": 1,
+          "name": "Edustus",
+          "color": "silver",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 2,
+          "name": "Sparri & Välineet",
+          "color": "crimson",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 3,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "18:15",
+          "end": "19:15"
+        },
+        {
+          "id": 4,
+          "name": "Alkeiskurssi I",
+          "color": "green",
+          "start": "19:15",
+          "end": "20:30"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Tiistai",
+      "lessons": [
+        {
+          "id": 0,
+          "name": "Edustus",
+          "color": "silver",
+          "start": "06:30",
+          "end": "07:45"
+        },
+        {
+          "id": 1,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "06:30",
+          "end": "07:45"
+        },
+        {
+          "id": 2,
+          "name": "Edustus",
+          "color": "silver",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 3,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 4,
+          "name": "Sparri & Välineet",
+          "color": "crimson",
+          "start": "18:00",
+          "end": "19:15"
+        },
+        {
+          "id": 5,
+          "name": "Ladythai",
+          "color": "mediumpurple",
+          "start": "18:15",
+          "end": "19:15"
+        },
+        {
+          "id": 6,
+          "name": "Alkeiskurssi II",
+          "color": "greenyellow",
+          "start": "19:15",
+          "end": "20:30"
+        }
+      ]
+    },
+
+    {
+      "id": "3",
+      "name": "Keskiviikko",
+      "lessons": [
+        {
+          "id": 0,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "10:30",
+          "end": "11:45"
+        },
+        {
+          "id": 1,
+          "name": "Edustus",
+          "color": "silver",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 2,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 3,
+          "name": "Sparri & Välineet",
+          "color": "crimson",
+          "start": "18:00",
+          "end": "19:15"
+        },
+        {
+          "id": 4,
+          "name": "Alkeiskurssi I",
+          "color": "green",
+          "start": "19:15",
+          "end": "20:30"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Torstai",
+      "lessons": [
+        {
+          "id": 0,
+          "name": "Edustus",
+          "color": "silver",
+          "start": "06:30",
+          "end": "07:45"
+        },
+        {
+          "id": 1,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "06:30",
+          "end": "07:45"
+        },
+        {
+          "id": 2,
+          "name": "Edustus",
+          "color": "silver",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 3,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 4,
+          "name": "Sparri & Välineet",
+          "color": "crimson",
+          "start": "18:00",
+          "end": "19:15"
+        },
+        {
+          "id": 5,
+          "name": "Ladythai",
+          "color": "mediumpurple",
+          "start": "18:15",
+          "end": "19:15"
+        },
+        {
+          "id": 6,
+          "name": "Alkeiskurssi II",
+          "color": "greenyellow",
+          "start": "19:15",
+          "end": "20:30"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Perjantai",
+      "lessons": [
+        {
+          "id": 0,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "10:30",
+          "end": "11:45"
+        },
+        {
+          "id": 1,
+          "name": "Edustus",
+          "color": "silver",
+          "start": "17:00",
+          "end": "18:15"
+        },
+        {
+          "id": 2,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "18:00",
+          "end": "19:15"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Lauantai",
+      "lessons": [
+        {
+          "id": 0,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "11:00",
+          "end": "12:15"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Sunnuntai",
+      "lessons": [
+        {
+          "id": 0,
+          "name": "Junnuthai",
+          "color": "deepskyblue",
+          "start": "11:00",
+          "end": "12:15"
+        },
+        {
+          "id": 1,
+          "name": "Tekniikka & Taktiikka",
+          "color": "gold",
+          "start": "12:30",
+          "end": "13:45"
+        }
+      ]
+    }
+  ]
+}
