@@ -1,7 +1,6 @@
 import React from "react";
-import { Platform, StatusBar, StyleSheet, View } from "react-native";
+import { Platform, StyleSheet, Linking } from "react-native";
 import * as treenilista from "./treenit.json";
-
 import { Font, AppLoading } from "expo";
 import {
   Button,
@@ -10,9 +9,6 @@ import {
   Footer,
   FooterTab,
   Content,
-  Form,
-  Item,
-  Picker,
   Left,
   Body,
   Right,
@@ -25,7 +21,15 @@ import {
   ActionSheet
 } from "native-base";
 
-var BUTTONS = [
+import Dialog, {
+  ScaleAnimation,
+  SlideAnimation,
+  DialogContent,
+  DialogTitle,
+  DialogButton
+} from "react-native-popup-dialog";
+
+var WEEKDAYS = [
   "Maanantai",
   "Tiistai",
   "Keskiviikko",
@@ -35,35 +39,46 @@ var BUTTONS = [
   "Sunnuntai"
 ];
 
-var infoData = "Palaute: matias.raisanen@gmail.com"
+// Email Anchor for info dialog
+class Anchor extends React.Component {
+  _handlePress = () => {
+    Linking.openURL(this.props.href);
+    this.props.onPress && this.props.onPress();
+  };
+
+  render() {
+    return (
+      <Button  danger iconleft onPress={this._handlePress}>
+        <Icon active type="FontAwesome" name="envelope" />
+        <Text>{this.props.title}</Text>
+      </Button>
+    );
+  }
+}
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.weekdays = [
-      "Maanantai",
-      "Tiistai",
-      "Keskiviikko",
-      "Torstai",
-      "Perjantai",
-      "Lauantai",
-      "Sunnuntai",
-      "Koko viikko"
-    ];
     var dt = new Date();
-
     var day = dt.getDay();
 
     if (day == 0) {
-      day = 7;
+      day = 6;
+    } else {
+      day--;
     }
 
-    this.state = { isModalVisible: false, loading: true, day: day - 1 };
+    this.state = {
+      selectedTreeni: "",
+      selectedDescription: "",
+      dialogVisible: false,
+      infoDialogVisible: false,
+      loading: true,
+      day
+    };
   }
 
-  _toggleModal = () =>
-  this.setState({ isModalVisible: !this.state.isModalVisible });
-
+  // Font fix for Expo
   async componentWillMount() {
     await Font.loadAsync({
       Roboto: require("native-base/Fonts/Roboto.ttf"),
@@ -72,40 +87,57 @@ export default class App extends React.Component {
     this.setState({ loading: false });
   }
 
+  // Change day on button press
   onDayChange(value) {
     this.setState({
       day: value
     });
   }
 
+  // Create CardItems for each lesson on the treenit.json for a given day
   createList(day) {
     cardItems = day.lessons.map(lesson => (
-      <CardItem bordered key={lesson.id}>
+      <CardItem
+        bordered
+        key={lesson.id}
+        button
+        onPress={() => {
+          this.setState({
+            selectedTreeni: lesson.name,
+            selectedDescription: lesson.description,
+            dialogVisible: true
+          });
+        }}
+      >
         <Left>
           <Text note>
             {lesson.start} - {lesson.end}
           </Text>
         </Left>
-        <Body style={{flexDirection: "row", justifyContent: "space-evenly", alignItems: "center"}}>
-          
-        <Icon
+        <Body
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center"
+          }}
+        >
+          <Icon
             active
             type="FontAwesome"
             name="circle"
-            style={{ color: lesson.color}}
+            style={{ color: lesson.color }}
           />
-          </Body>
-          <Body>
-          <Text >{lesson.name}</Text>
-          
         </Body>
-        
+        <Body>
+          <Text>{lesson.name}</Text>
+        </Body>
       </CardItem>
     ));
 
     return <Card>{cardItems}</Card>;
   }
 
+  // Render the app
   render() {
     if (this.state.loading) {
       return (
@@ -123,8 +155,7 @@ export default class App extends React.Component {
               Platform.OS === "ios" ? 0 : Expo.Constants.statusBarHeight
           }}
         >
-
-          <Header>
+          <Header style={styles.header}>
             <Left />
             <Body>
               <Title>HTBC Treenikalenteri</Title>
@@ -136,17 +167,17 @@ export default class App extends React.Component {
               <CardItem header bordered>
                 <Left>
                   <Text style={styles.headingText}>
-                    {this.weekdays[this.state.day]}
+                    {WEEKDAYS[this.state.day]}
                   </Text>
                 </Left>
 
                 <Right>
                   <Button
-                    info
+                    danger
                     onPress={() =>
                       ActionSheet.show(
                         {
-                          options: BUTTONS,
+                          options: WEEKDAYS,
                           cancelButtonIndex: this.state.day
                         },
                         buttonIndex => {
@@ -162,20 +193,128 @@ export default class App extends React.Component {
             </Card>
 
             {this.createList(treenilista.days[this.state.day])}
+
+            <Dialog
+              width={0.9}
+              visible={this.state.dialogVisible}
+              dialogTitle={<DialogTitle title={this.state.selectedTreeni} />}
+              onTouchOutside={() => {
+                this.setState({ dialogVisible: false });
+              }}
+              dialogAnimation={
+                new ScaleAnimation({
+                  toValue: 0,
+                  useNativeDriver: true
+                })
+              }
+              actions={[
+                <DialogButton style={styles.htbcRed}
+                  text="SULJE"
+                  textStyle={styles.htbcRed}
+                  onPress={() => {
+                    this.setState({ dialogVisible: false });
+                  }}
+                />
+              ]}
+            >
+              <DialogContent>
+                <Card>
+                  <CardItem>
+                    <Body>
+                      <Text>{this.state.selectedDescription}</Text>
+                    </Body>
+                  </CardItem>
+                </Card>
+              </DialogContent>
+            </Dialog>
           </Content>
           <Footer>
-            <FooterTab>
-              <Button vertical>
-            <Icon
-            type="FontAwesome" 
-            name='info-circle' 
-            style={{ color: "white"}}
-            onPress={() => alert(infoData)}
-            />
-            <Text>Info</Text>
-            </Button>
+            <FooterTab style={styles.header}>
+              <Button
+                vertical
+                onPress={() => {
+                  this.setState({ infoDialogVisible: true });
+                }}
+              >
+                <Icon
+                  type="FontAwesome"
+                  name="info-circle"
+                  style={{ color: "white" }}
+                />
+                <Text style={styles.htbcRed}>Info</Text>
+              </Button>
             </FooterTab>
-            </Footer>
+
+            <Dialog
+              width={0.9}
+              visible={this.state.infoDialogVisible}
+              dialogTitle={<DialogTitle title="HTBC Treenikalenteri" />}
+              onTouchOutside={() => {
+                this.setState({ infoDialogVisible: false });
+              }}
+
+              dialogAnimation={
+                new SlideAnimation({
+                  toValue: 0,
+                  slideFrom: "bottom",
+                  useNativeDriver: true
+                })
+              }
+              actions={[
+                <DialogButton                
+                  text="SULJE"
+                  textStyle={styles.htbcRed}
+                  onPress={() => {
+                    this.setState({ infoDialogVisible: false });
+                  }} />
+              ]}
+            >
+              <DialogContent>
+              <Card>
+              <CardItem header bordered>
+              <Text 
+            style={styles.htbcRed}>Info</Text>
+            </CardItem>
+
+              <CardItem >
+                <Text>Sovelluksen kehittänyt Matias Räisänen.</Text>
+                </CardItem>
+              <CardItem bordered>
+                <Text>
+                Helsinki Thaiboxing Club ei vastaa
+                  treenikalenterisovelluksen kehityksestä.</Text>
+                </CardItem>
+                </Card>
+                <Card>
+
+                <CardItem header bordered>
+              <Text style={styles.htbcRed}>Ota yhteyttä</Text>
+            </CardItem>
+
+                <CardItem bordered>
+              <Body>
+
+                <Anchor href="mailto:info@htbc.fi" title="ota yhteyttä seuraan" />
+                
+              </Body>
+            </CardItem>
+
+
+            <CardItem bordered>
+              <Body>
+                <Text>Palaute sovelluksen kehittäjälle{"\n"}
+                </Text>
+
+                <Anchor
+                  href="mailto:matias.raisanen@gmail.com?subject=PALAUTE: HTBC treenikalenteri"
+                  title="Palaute kehittäjälle"
+                />
+                </Body>
+            </CardItem>
+            </Card>
+              </DialogContent>
+            </Dialog>
+          </Footer>
         </Container>
       </Root>
     );
@@ -189,6 +328,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
+  header: {
+    backgroundColor: "#c41b1e"
+  },
   headingItem: {
     flexDirection: "row",
     flex: 1,
@@ -197,10 +339,13 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: 20,
-    color: "blue",
+    color: "black",
     fontWeight: "bold"
   },
   cardMiddle: {
-    flexDirection: "row",
+    flexDirection: "row"
   },
+  htbcRed:{
+    color: "#c41b1e"
+  }
 });

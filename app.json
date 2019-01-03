@@ -1,13 +1,10 @@
 {
   "expo": {
-    "name": "HTBC treenikalenteri",
+    "name": "HTBC treenit",
     "slug": "htbc-treenikalenteri",
     "privacy": "public",
     "sdkVersion": "31.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
+    "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/boxing-gloves.png",
@@ -19,12 +16,13 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "android": {
+      "package": "com.matiasraisanen.htbc_treenikalenteri"
+    },
+    "description": "HBTC treenikalenteri mobiilisovelluksena. HTBC ei vastaa sovelluksen kehityksestä, vaan itsenäinen kehittäjä."
   }
 }
