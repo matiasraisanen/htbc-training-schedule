@@ -95,7 +95,7 @@ export default class App extends React.Component {
   }
 
   // Create CardItems for each lesson on the treenit.json for a given day
-  createList(day) {
+  createList(day, details) {
     cardItems = day.lessons.map(lesson => (
       <CardItem
         bordered
@@ -103,8 +103,8 @@ export default class App extends React.Component {
         button
         onPress={() => {
           this.setState({
-            selectedTreeni: lesson.name,
-            selectedDescription: lesson.description,
+            selectedTreeni: details[lesson.type].longname,
+            selectedDescription: details[lesson.type].description,
             dialogVisible: true
           });
         }}
@@ -125,7 +125,7 @@ export default class App extends React.Component {
             active
             type="FontAwesome"
             name="circle"
-            style={{ color: lesson.color }}
+            style={{ color: details[lesson.type].color }}
           />
         </Body>
         <Body>
@@ -192,7 +192,10 @@ export default class App extends React.Component {
               </CardItem>
             </Card>
 
-            {this.createList(treenilista.days[this.state.day])}
+            {this.createList(
+              treenilista.schedule[this.state.day],
+              treenilista.lesson_details
+            )}
 
             <Dialog
               width={0.9}

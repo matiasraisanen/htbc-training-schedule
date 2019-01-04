@@ -1,5 +1,5 @@
 {
-  "days": [
+  "schedule": [
     {
       "id": "1",
       "name": "Maanantai",
@@ -7,42 +7,37 @@
         {
           "id": 0,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 0,
           "start": "10:30",
-          "end": "11:45",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+          "end": "11:45"
         },
         {
           "id": 1,
           "name": "Edustus",
-          "color": "silver",
+          "type": 3,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+          "end": "18:15"
         },
         {
           "id": 2,
           "name": "Sparri & Välineet",
-          "color": "crimson",
+          "type": 2,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Tässä ryhmässä treenaavat kaikki ottelunhaluiset ja sparria kaipaavat harrastajat. Treenitempo on kova ja harjoittelu on kilpailuun tähtäävää. Ryhmässä treenaaminen edellyttää täyttä varustusta: sparrihanskat, kyynärsuojat, säärisuojat, hammassuojat, alasuojat, kypärä sekä hyppynaru."
+          "end": "18:15"
         },
         {
           "id": 3,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 1,
           "start": "18:15",
-          "end": "19:15",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kevyttä kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin."
+          "end": "19:15"
         },
         {
           "id": 4,
           "name": "Alkeiskurssi I",
-          "color": "green",
+          "type": 6,
           "start": "19:15",
-          "end": "20:30",
-          "description": "Opetellaan Muay Thain eli thainyrkkeilyn perustekniikat ja nostetaan kuntoa sekä lihaskestävyyttä. Kurssin kesto on n. 8 viikkoa ja se on tarkoitettu kaiken kuntoisille yli 13-vuotiaille naisille ja miehille. Kurssin aikana ei sparrata ja kontaktia otetaan vain säkkiin ja potkutyynyihin. Alkeiskurssille osallistuvan varustuksena on hyvä olla t-paita, verkkarit tai shortsit. Kenkiä ei tarvita. Kurssimaksun hinnalla voit osallistua myös yhteisiin aamutreeneihin."
+          "end": "20:30"
         }
       ]
     },
@@ -53,58 +48,52 @@
         {
           "id": 0,
           "name": "Edustus",
-          "color": "silver",
+          "type": 3,
           "start": "06:30",
-          "end": "07:45",
-          "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+          "end": "07:45"
         },
         {
           "id": 1,
           "name": "Tekniikka & Taktiikka",
+          "type": 0,
           "color": "gold",
           "start": "06:30",
-          "end": "07:45",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+          "end": "07:45"
         },
         {
           "id": 2,
           "name": "Edustus",
-          "color": "silver",
+          "type": 3,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+          "end": "18:15"
         },
         {
           "id": 3,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 1,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kevyttä kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin."
+          "end": "18:15"
         },
         {
           "id": 4,
           "name": "Sparri & Välineet",
-          "color": "crimson",
+          "type": 2,
           "start": "18:00",
-          "end": "19:15",
-          "description": "Tässä ryhmässä treenaavat kaikki ottelunhaluiset ja sparria kaipaavat harrastajat. Treenitempo on kova ja harjoittelu on kilpailuun tähtäävää. Ryhmässä treenaaminen edellyttää täyttä varustusta: sparrihanskat, kyynärsuojat, säärisuojat, hammassuojat, alasuojat, kypärä sekä hyppynaru."
+          "end": "19:15"
         },
         {
           "id": 5,
           "name": "Ladythai",
-          "color": "mediumpurple",
+          "type": 4,
           "start": "18:15",
-          "end": "19:15",
-          "description": "Thainyrkkeilystä naisille kehitetty oma FITNESS-laji, jossa rasva palaa ja kunto nousee. Tässä ryhmässä naiset jatkavat siitä mihin alkeiskurssilla päädyttiin. Treeneissä ei kiinnitetä liikaa huomiota oikeaoppisiin tekniikoihin vaan oleellista on syke ja kova tempo, kuitenkin thainyrkkeily-tekniikkaa käyttäen. Ryhmässä ei sparrata ollenkaan, vaan treenataan paljon säkki- ja potkutyynyharjoituksia parin kanssa sekä keskitytään huolella lihaskuntoon. Varustukseksi riittää säkkihanskat."
+          "end": "19:15"
         },
         {
           "id": 6,
           "name": "Alkeiskurssi II",
-          "color": "greenyellow",
+          "type": 7,
           "start": "19:15",
-          "end": "20:30",
-          "description": "Opetellaan Muay Thain eli thainyrkkeilyn perustekniikat ja nostetaan kuntoa sekä lihaskestävyyttä. Kurssin kesto on n. 8 viikkoa ja se on tarkoitettu kaiken kuntoisille yli 13-vuotiaille naisille ja miehille. Kurssin aikana ei sparrata ja kontaktia otetaan vain säkkiin ja potkutyynyihin. Alkeiskurssille osallistuvan varustuksena on hyvä olla t-paita, verkkarit tai shortsit. Kenkiä ei tarvita. Kurssimaksun hinnalla voit osallistua myös yhteisiin aamutreeneihin."
+          "end": "20:30"
         }
       ]
     },
@@ -116,42 +105,37 @@
         {
           "id": 0,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 0,
           "start": "10:30",
-          "end": "11:45",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+          "end": "11:45"
         },
         {
           "id": 1,
           "name": "Edustus",
-          "color": "silver",
+          "type": 3,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+          "end": "18:15"
         },
         {
           "id": 2,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 1,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kevyttä kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin."
+          "end": "18:15"
         },
         {
           "id": 3,
           "name": "Sparri & Välineet",
-          "color": "crimson",
+          "type": 2,
           "start": "18:00",
-          "end": "19:15",
-          "description": "Tässä ryhmässä treenaavat kaikki ottelunhaluiset ja sparria kaipaavat harrastajat. Treenitempo on kova ja harjoittelu on kilpailuun tähtäävää. Ryhmässä treenaaminen edellyttää täyttä varustusta: sparrihanskat, kyynärsuojat, säärisuojat, hammassuojat, alasuojat, kypärä sekä hyppynaru."
+          "end": "19:15"
         },
         {
           "id": 4,
           "name": "Alkeiskurssi I",
-          "color": "green",
+          "type": 6,
           "start": "19:15",
-          "end": "20:30",
-          "description": "Opetellaan Muay Thain eli thainyrkkeilyn perustekniikat ja nostetaan kuntoa sekä lihaskestävyyttä. Kurssin kesto on n. 8 viikkoa ja se on tarkoitettu kaiken kuntoisille yli 13-vuotiaille naisille ja miehille. Kurssin aikana ei sparrata ja kontaktia otetaan vain säkkiin ja potkutyynyihin. Alkeiskurssille osallistuvan varustuksena on hyvä olla t-paita, verkkarit tai shortsit. Kenkiä ei tarvita. Kurssimaksun hinnalla voit osallistua myös yhteisiin aamutreeneihin."
+          "end": "20:30"
         }
       ]
     },
@@ -162,58 +146,51 @@
         {
           "id": 0,
           "name": "Edustus",
-          "color": "silver",
+          "type": 3,
           "start": "06:30",
-          "end": "07:45",
-          "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+          "end": "07:45"
         },
         {
           "id": 1,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 0,
           "start": "06:30",
-          "end": "07:45",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+          "end": "07:45"
         },
         {
           "id": 2,
           "name": "Edustus",
-          "color": "silver",
+          "type": 3,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+          "end": "18:15"
         },
         {
           "id": 3,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 1,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kevyttä kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin."
+          "end": "18:15"
         },
         {
           "id": 4,
           "name": "Sparri & Välineet",
-          "color": "crimson",
+          "type": 2,
           "start": "18:00",
-          "end": "19:15",
-          "description": "Tässä ryhmässä treenaavat kaikki ottelunhaluiset ja sparria kaipaavat harrastajat. Treenitempo on kova ja harjoittelu on kilpailuun tähtäävää. Ryhmässä treenaaminen edellyttää täyttä varustusta: sparrihanskat, kyynärsuojat, säärisuojat, hammassuojat, alasuojat, kypärä sekä hyppynaru."
+          "end": "19:15"
         },
         {
           "id": 5,
           "name": "Ladythai",
-          "color": "mediumpurple",
+          "type": 4,
           "start": "18:15",
-          "end": "19:15",
-          "description": "Thainyrkkeilystä naisille kehitetty oma FITNESS-laji, jossa rasva palaa ja kunto nousee. Tässä ryhmässä naiset jatkavat siitä mihin alkeiskurssilla päädyttiin. Treeneissä ei kiinnitetä liikaa huomiota oikeaoppisiin tekniikoihin vaan oleellista on syke ja kova tempo, kuitenkin thainyrkkeily-tekniikkaa käyttäen. Ryhmässä ei sparrata ollenkaan, vaan treenataan paljon säkki- ja potkutyynyharjoituksia parin kanssa sekä keskitytään huolella lihaskuntoon. Varustukseksi riittää säkkihanskat."
+          "end": "19:15"
         },
         {
           "id": 6,
           "name": "Alkeiskurssi II",
-          "color": "greenyellow",
+          "type": 7,
           "start": "19:15",
-          "end": "20:30",
-          "description": "Opetellaan Muay Thain eli thainyrkkeilyn perustekniikat ja nostetaan kuntoa sekä lihaskestävyyttä. Kurssin kesto on n. 8 viikkoa ja se on tarkoitettu kaiken kuntoisille yli 13-vuotiaille naisille ja miehille. Kurssin aikana ei sparrata ja kontaktia otetaan vain säkkiin ja potkutyynyihin. Alkeiskurssille osallistuvan varustuksena on hyvä olla t-paita, verkkarit tai shortsit. Kenkiä ei tarvita. Kurssimaksun hinnalla voit osallistua myös yhteisiin aamutreeneihin."
+          "end": "20:30"
         }
       ]
     },
@@ -224,26 +201,23 @@
         {
           "id": 0,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 0,
           "start": "10:30",
-          "end": "11:45",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+          "end": "11:45"
         },
         {
           "id": 1,
           "name": "Edustus",
-          "color": "silver",
+          "type": 3,
           "start": "17:00",
-          "end": "18:15",
-          "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+          "end": "18:15"
         },
         {
           "id": 2,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 1,
           "start": "18:00",
-          "end": "19:15",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kevyttä kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin."
+          "end": "19:15"
         }
       ]
     },
@@ -254,10 +228,9 @@
         {
           "id": 0,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 0,
           "start": "11:00",
-          "end": "12:15",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+          "end": "12:15"
         }
       ]
     },
@@ -268,20 +241,68 @@
         {
           "id": 0,
           "name": "Junnuthai",
-          "color": "deepskyblue",
+          "type": 5,
           "start": "11:00",
-          "end": "12:15",
-          "description": "6-12 vuotiaille tytöille ja pojille. Junnuthaissa opetellaan thainyrkkeilyn perustekniikoita mm. erilaisia lyöntejä, potkuja ja thainyrkkeilyliikkumista, urheillaan monipuolisesti pelien ja leikkien merkeissä, sekä tehdään kevyitä, lajinomaisia ja monipuolisia harjoitteita. Junnuthaissa ei ensisijaisesti ole fyysistä kontaktia harjoittelukavereihin, vaan tekniikoita harjoitellaan potkutyynyihin, säkkeihin ja pistehanskoihin.  Junnuthaissa lapset oppivat thainyrkkeilyn alkeiden lisäksi monipuolista kehonhallintaa, sosiaalisia taitoja, itseluottamusta ja mikä tärkeintä, lapset pääsevät purkamaan energiaansa turvallisessa ja valvotussa ympäristössä. Varustukseksi riittävät t-paita, shortsit ja juomapullo. Junnuthaivalmentajina toimivat tehtävään koulutetut junnuvalmentajat."
+          "end": "12:15"
         },
         {
           "id": 1,
           "name": "Tekniikka & Taktiikka",
-          "color": "gold",
+          "type": 0,
           "start": "12:30",
-          "end": "13:45",
-          "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+          "end": "13:45"
         }
       ]
+    }
+  ],
+  "lesson_details": [
+    {
+      "type": 0,
+      "longname": "Tekniikka & Taktiikka, aamu",
+      "color": "gold",
+      "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin. Aamutreenit ovat avoinna kaikille HTBC:n jäsenille, myös alkeiskurssilaisille. Varustus: säärisuojat, säkkihanskat, nyrkkeilyhanskat, alasuojat, hammassuojat ja kyynärsuojat."
+    },
+    {
+      "type": 1,
+      "longname": "Tekniikka & Taktiikka, ilta",
+      "color": "gold",
+      "description": "Ryhmä on tarkoitettu harrastajille, joita ei sparraus kiinnosta tai jotka haluavat keskittyä thainyrkkeilytekniikoiden oppimiseen ja treenikunnon nostamiseen. Treeneissä tulee kuitenkin ajoittain kevyttä kontaktia tekniikkaharjotteiden myötä. Tempo pysyy koko ajan hyvänä, mutta tässä ryhmässä pärjää vaikka olisi vähän päässyt kunto laskemaankin."
+    },
+    {
+      "type": 2,
+      "longname": "Sparri & Välineet",
+      "color": "crimson",
+      "description": "Tässä ryhmässä treenaavat kaikki ottelunhaluiset ja sparria kaipaavat harrastajat. Treenitempo on kova ja harjoittelu on kilpailuun tähtäävää. Ryhmässä treenaaminen edellyttää täyttä varustusta: sparrihanskat, kyynärsuojat, säärisuojat, hammassuojat, alasuojat, kypärä sekä hyppynaru."
+    },
+    {
+      "type": 3,
+      "longname": "Edustus",
+      "color": "silver",
+      "description": "Tässä ryhmässä harjoittelevat menestyneimmät ottelijamme. Ottelijat keskittyvät kansallisiin ja kansainvälisiin huippuotteluihin. Edustusryhmässä treenitempo on erittäin kova, joten luonnollisesti ottelijalla pitää olla siihen tarvittavat ominaisuudet. Päävalmentaja Petri Martinez tekee valinnat tähän ryhmään."
+    },
+    {
+      "type": 4,
+      "longname": "Ladythai",
+      "color": "mediumpurple",
+      "description": "Thainyrkkeilystä naisille kehitetty oma FITNESS-laji, jossa rasva palaa ja kunto nousee. Tässä ryhmässä naiset jatkavat siitä mihin alkeiskurssilla päädyttiin. Treeneissä ei kiinnitetä liikaa huomiota oikeaoppisiin tekniikoihin vaan oleellista on syke ja kova tempo, kuitenkin thainyrkkeily-tekniikkaa käyttäen. Ryhmässä ei sparrata ollenkaan, vaan treenataan paljon säkki- ja potkutyynyharjoituksia parin kanssa sekä keskitytään huolella lihaskuntoon. Varustukseksi riittää säkkihanskat."
+    },
+    {
+      "type": 5,
+      "longname": "Junnuthai",
+      "color": "deepskyblue",
+      "description": "6-12 vuotiaille tytöille ja pojille. Junnuthaissa opetellaan thainyrkkeilyn perustekniikoita mm. erilaisia lyöntejä, potkuja ja thainyrkkeilyliikkumista, urheillaan monipuolisesti pelien ja leikkien merkeissä, sekä tehdään kevyitä, lajinomaisia ja monipuolisia harjoitteita. Junnuthaissa ei ensisijaisesti ole fyysistä kontaktia harjoittelukavereihin, vaan tekniikoita harjoitellaan potkutyynyihin, säkkeihin ja pistehanskoihin.  Junnuthaissa lapset oppivat thainyrkkeilyn alkeiden lisäksi monipuolista kehonhallintaa, sosiaalisia taitoja, itseluottamusta ja mikä tärkeintä, lapset pääsevät purkamaan energiaansa turvallisessa ja valvotussa ympäristössä. Varustukseksi riittävät t-paita, shortsit ja juomapullo. Junnuthaivalmentajina toimivat tehtävään koulutetut junnuvalmentajat."
+    },
+    {
+      "type": 6,
+      "longname": "Alkeiskurssi I",
+      "color": "green",
+      "description": "Opetellaan Muay Thain eli thainyrkkeilyn perustekniikat ja nostetaan kuntoa sekä lihaskestävyyttä. Kurssin kesto on n. 8 viikkoa ja se on tarkoitettu kaiken kuntoisille yli 13-vuotiaille naisille ja miehille. Kurssin aikana ei sparrata ja kontaktia otetaan vain säkkiin ja potkutyynyihin. Alkeiskurssille osallistuvan varustuksena on hyvä olla t-paita, verkkarit tai shortsit. Kenkiä ei tarvita. Kurssimaksun hinnalla voit osallistua myös yhteisiin aamutreeneihin."
+    },
+    {
+      "type": 7,
+      "longname": "Alkeiskurssi II",
+      "color": "greenyellow",
+      "description": "Opetellaan Muay Thain eli thainyrkkeilyn perustekniikat ja nostetaan kuntoa sekä lihaskestävyyttä. Kurssin kesto on n. 8 viikkoa ja se on tarkoitettu kaiken kuntoisille yli 13-vuotiaille naisille ja miehille. Kurssin aikana ei sparrata ja kontaktia otetaan vain säkkiin ja potkutyynyihin. Alkeiskurssille osallistuvan varustuksena on hyvä olla t-paita, verkkarit tai shortsit. Kenkiä ei tarvita. Kurssimaksun hinnalla voit osallistua myös yhteisiin aamutreeneihin."
     }
   ]
 }
