@@ -202,7 +202,11 @@ export default class App extends React.Component {
               visible={this.state.dialogVisible}
               dialogTitle={<DialogTitle title={this.state.selectedTreeni} />}
               onTouchOutside={() => {
-                this.setState({ dialogVisible: false });
+                this.setState({
+                  dialogVisible: false,
+                  selectedTreeni: "",
+                  selectedDescription: ""
+                });
               }}
               dialogAnimation={
                 new ScaleAnimation({
@@ -216,7 +220,11 @@ export default class App extends React.Component {
                   text="SULJE"
                   textStyle={styles.htbcRed}
                   onPress={() => {
-                    this.setState({ dialogVisible: false });
+                    this.setState({
+                      dialogVisible: false,
+                      selectedTreeni: "",
+                      selectedDescription: ""
+                    });
                   }}
                 />
               ]}
