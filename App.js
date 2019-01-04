@@ -48,7 +48,7 @@ class Anchor extends React.Component {
 
   render() {
     return (
-      <Button  danger iconleft onPress={this._handlePress}>
+      <Button danger iconleft onPress={this._handlePress}>
         <Icon active type="FontAwesome" name="envelope" />
         <Text>{this.props.title}</Text>
       </Button>
@@ -155,7 +155,7 @@ export default class App extends React.Component {
               Platform.OS === "ios" ? 0 : Expo.Constants.statusBarHeight
           }}
         >
-          <Header style={styles.header}>
+          <Header style={styles.htbcRedBG}>
             <Left />
             <Body>
               <Title>HTBC Treenikalenteri</Title>
@@ -208,7 +208,8 @@ export default class App extends React.Component {
                 })
               }
               actions={[
-                <DialogButton style={styles.htbcRed}
+                <DialogButton
+                  style={styles.htbcRed}
                   text="SULJE"
                   textStyle={styles.htbcRed}
                   onPress={() => {
@@ -229,7 +230,7 @@ export default class App extends React.Component {
             </Dialog>
           </Content>
           <Footer>
-            <FooterTab style={styles.header}>
+            <FooterTab style={styles.htbcRedBG}>
               <Button
                 vertical
                 onPress={() => {
@@ -241,7 +242,7 @@ export default class App extends React.Component {
                   name="info-circle"
                   style={{ color: "white" }}
                 />
-                <Text style={styles.htbcRed}>Info</Text>
+                <Text style={{ color: "white" }}>Info</Text>
               </Button>
             </FooterTab>
 
@@ -252,7 +253,6 @@ export default class App extends React.Component {
               onTouchOutside={() => {
                 this.setState({ infoDialogVisible: false });
               }}
-
               dialogAnimation={
                 new SlideAnimation({
                   toValue: 0,
@@ -261,57 +261,56 @@ export default class App extends React.Component {
                 })
               }
               actions={[
-                <DialogButton                
+                <DialogButton
                   text="SULJE"
                   textStyle={styles.htbcRed}
                   onPress={() => {
                     this.setState({ infoDialogVisible: false });
-                  }} />
+                  }}
+                />
               ]}
             >
               <DialogContent>
-              <Card>
-              <CardItem header bordered>
-              <Text 
-            style={styles.htbcRed}>Info</Text>
-            </CardItem>
+                <Card>
+                  <CardItem header bordered>
+                    <Text style={styles.htbcRed}>Info</Text>
+                  </CardItem>
 
-              <CardItem >
-                <Text>Sovelluksen kehittänyt Matias Räisänen.</Text>
-                </CardItem>
-              <CardItem bordered>
-                <Text>
-                Helsinki Thaiboxing Club ei vastaa
-                  treenikalenterisovelluksen kehityksestä.</Text>
-                </CardItem>
+                  <CardItem>
+                    <Text>Sovelluksen kehittänyt Matias Räisänen.</Text>
+                  </CardItem>
+                  <CardItem bordered>
+                    <Text>
+                      Helsinki Thaiboxing Club ei vastaa
+                      treenikalenterisovelluksen kehityksestä.
+                    </Text>
+                  </CardItem>
                 </Card>
                 <Card>
+                  <CardItem header bordered>
+                    <Text style={styles.htbcRed}>Ota yhteyttä</Text>
+                  </CardItem>
 
-                <CardItem header bordered>
-              <Text style={styles.htbcRed}>Ota yhteyttä</Text>
-            </CardItem>
+                  <CardItem bordered>
+                    <Body>
+                      <Anchor
+                        href="mailto:info@htbc.fi"
+                        title="ota yhteyttä seuraan"
+                      />
+                    </Body>
+                  </CardItem>
 
-                <CardItem bordered>
-              <Body>
+                  <CardItem bordered>
+                    <Body>
+                      <Text>Palaute sovelluksen kehittäjälle{"\n"}</Text>
 
-                <Anchor href="mailto:info@htbc.fi" title="ota yhteyttä seuraan" />
-                
-              </Body>
-            </CardItem>
-
-
-            <CardItem bordered>
-              <Body>
-                <Text>Palaute sovelluksen kehittäjälle{"\n"}
-                </Text>
-
-                <Anchor
-                  href="mailto:matias.raisanen@gmail.com?subject=PALAUTE: HTBC treenikalenteri"
-                  title="Palaute kehittäjälle"
-                />
-                </Body>
-            </CardItem>
-            </Card>
+                      <Anchor
+                        href="mailto:matias.raisanen@gmail.com?subject=PALAUTE: HTBC treenikalenteri"
+                        title="Palaute kehittäjälle"
+                      />
+                    </Body>
+                  </CardItem>
+                </Card>
               </DialogContent>
             </Dialog>
           </Footer>
@@ -328,7 +327,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  header: {
+  htbcRedBG: {
     backgroundColor: "#c41b1e"
   },
   headingItem: {
@@ -345,7 +344,7 @@ const styles = StyleSheet.create({
   cardMiddle: {
     flexDirection: "row"
   },
-  htbcRed:{
+  htbcRed: {
     color: "#c41b1e"
   }
 });
