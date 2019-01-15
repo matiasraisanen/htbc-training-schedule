@@ -216,8 +216,8 @@ export default class App extends React.Component {
               }
               actions={[
                 <DialogButton
-                  style={styles.htbcRed}
                   text="SULJE"
+                  key="closeTreeniDialog"
                   textStyle={styles.htbcRed}
                   onPress={() => {
                     this.setState({
@@ -274,6 +274,7 @@ export default class App extends React.Component {
               actions={[
                 <DialogButton
                   text="SULJE"
+                  key="closeInfoDialog"
                   textStyle={styles.htbcRed}
                   onPress={() => {
                     this.setState({ infoDialogVisible: false });
@@ -314,13 +315,11 @@ export default class App extends React.Component {
 
                 <Card>
                   <CardItem header bordered>
-                    
-                      <Text style={styles.htbcRed}>Palaute sovelluksesta</Text>
-                      </CardItem>
-                
-                  <CardItem>
-                  <Body>
+                    <Text style={styles.htbcRed}>Palaute sovelluksesta</Text>
+                  </CardItem>
 
+                  <CardItem>
+                    <Body>
                       <Anchor
                         href="mailto:matias.raisanen@gmail.com?subject=PALAUTE: HTBC treenikalenteri"
                         title="Palaute kehittäjälle"
