@@ -293,7 +293,7 @@ export default class App extends React.Component {
                   <CardItem bordered>
                     <Text>
                       Helsinki Thaiboxing Club ei vastaa
-                      treenikalenterisovelluksen kehityksestä.
+                      treenikalenterisovelluksen sisällöstä.
                     </Text>
                   </CardItem>
                 </Card>
@@ -310,10 +310,16 @@ export default class App extends React.Component {
                       />
                     </Body>
                   </CardItem>
+                </Card>
 
-                  <CardItem bordered>
-                    <Body>
-                      <Text>Palaute sovelluksen kehittäjälle{"\n"}</Text>
+                <Card>
+                  <CardItem header bordered>
+                    
+                      <Text style={styles.htbcRed}>Palaute sovelluksesta</Text>
+                      </CardItem>
+                
+                  <CardItem>
+                  <Body>
 
                       <Anchor
                         href="mailto:matias.raisanen@gmail.com?subject=PALAUTE: HTBC treenikalenteri"
