@@ -4,11 +4,8 @@
     "slug": "htbc-treenikalenteri",
     "privacy": "public",
     "sdkVersion": "31.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "version": "1.0.0",
+    "platforms": ["android"],
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/boxing-gloves.png",
     "splash": {
@@ -19,15 +16,16 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "package": "com.matiasraisanen.htbc_treenikalenteri"
+      "package": "com.matiasraisanen.htbc_treenikalenteri",
+      "permissions": [],
+      "versionCode": 2
     },
-    "description": "HBTC treenikalenteri mobiilisovelluksena."
+    "description": "HTBC treenikalenteri mobiilisovelluksena. Ikonin tehnyt Pixel Perfect @ www.flaticon.com",
+    "githubUrl": "https://github.com/matiasraisanen/htbc-training-schedule"
   }
 }
