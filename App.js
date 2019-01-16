@@ -1,5 +1,5 @@
 import React from "react";
-import { Platform, StyleSheet, Linking } from "react-native";
+import { Platform, StyleSheet, Linking, BackHandler } from "react-native";
 import * as treenilista from "./treenit.json";
 import { Font, AppLoading } from "expo";
 import {
@@ -71,12 +71,35 @@ export default class App extends React.Component {
     this.state = {
       selectedTreeni: "",
       selectedDescription: "",
-      dialogVisible: false,
+      treeniDialogVisible: false,
       infoDialogVisible: false,
       loading: true,
       day
     };
   }
+
+  componentDidMount() {
+    BackHandler.addEventListener("hardwareBackPress", this.handleBackPress);
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener("hardwareBackPress", this.handleBackPress);
+  }
+
+  handleBackPress = () => {
+    if (this.state.treeniDialogVisible == true) {
+      this.setState({
+        treeniDialogVisible: false,
+        selectedTreeni: "",
+        selectedDescription: ""
+      });
+    } else if (this.state.infoDialogVisible == true) {
+      this.setState({ infoDialogVisible: false });
+    } else {
+      BackHandler.exitApp();
+    }
+    return true;
+  };
 
   // Font fix for Expo
   async componentWillMount() {
@@ -105,7 +128,7 @@ export default class App extends React.Component {
           this.setState({
             selectedTreeni: details[lesson.type].longname,
             selectedDescription: details[lesson.type].description,
-            dialogVisible: true
+            treeniDialogVisible: true
           });
         }}
       >
@@ -198,15 +221,18 @@ export default class App extends React.Component {
             )}
 
             <Dialog
-              width={0.9}
-              visible={this.state.dialogVisible}
+              width={0.8}
+              visible={this.state.treeniDialogVisible}
               dialogTitle={<DialogTitle title={this.state.selectedTreeni} />}
               onTouchOutside={() => {
                 this.setState({
-                  dialogVisible: false,
+                  treeniDialogVisible: false,
                   selectedTreeni: "",
                   selectedDescription: ""
                 });
+              }}
+              onHardwareBackPress={() => {
+                this.handleBackPress;
               }}
               dialogAnimation={
                 new ScaleAnimation({
@@ -221,7 +247,7 @@ export default class App extends React.Component {
                   textStyle={styles.htbcRed}
                   onPress={() => {
                     this.setState({
-                      dialogVisible: false,
+                      treeniDialogVisible: false,
                       selectedTreeni: "",
                       selectedDescription: ""
                     });
@@ -264,6 +290,9 @@ export default class App extends React.Component {
               onTouchOutside={() => {
                 this.setState({ infoDialogVisible: false });
               }}
+              onHardwareBackPress={() => {
+                this.handleBackPress;
+              }}
               dialogAnimation={
                 new SlideAnimation({
                   toValue: 0,
@@ -289,7 +318,7 @@ export default class App extends React.Component {
                   </CardItem>
 
                   <CardItem>
-                    <Text>Sovelluksen kehittänyt Matias Räisänen.</Text>
+                    <Text>Sovelluksen on kehittänyt Matias Räisänen.</Text>
                   </CardItem>
                   <CardItem bordered>
                     <Text>
