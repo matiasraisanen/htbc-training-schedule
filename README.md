@@ -1,6 +1,6 @@
 # HTBC Training Schedule
 
-Training Schedule App for HTBC Thaiboxing Club. App is in no way affiliated with the aforementioned club, but rather developed independently.  
+Training Schedule App for Helsinki Thaiboxing Club. App is in no way affiliated with the aforementioned club, but rather developed independently.  
 Built for Android.
 
 ## Development
@@ -26,3 +26,7 @@ Follow [this](https://www.xda-developers.com/install-adb-windows-macos-linux/) g
 # Demo
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=v_XiRjFnJ4Q" target="_blank"><img src="http://img.youtube.com/vi/v_XiRjFnJ4Q/0.jpg" alt="Demo" width="240" height="180" border="10" /></a><br> [Application Demo](https://www.youtube.com/watch?v=v_XiRjFnJ4Q)
+
+# Install on device
+
+Get the App on [Google Play store](https://play.google.com/store/apps/details?id=com.matiasraisanen.htbc_treenikalenteri)

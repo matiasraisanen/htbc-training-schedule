@@ -49,7 +49,7 @@ class Anchor extends React.Component {
   render() {
     return (
       <Button danger iconleft onPress={this._handlePress}>
-        <Icon active type="FontAwesome" name="envelope" />
+        <Icon active type="MaterialIcons" name="email" />
         <Text>{this.props.title}</Text>
       </Button>
     );
@@ -169,7 +169,6 @@ export default class App extends React.Component {
         </Container>
       );
     }
-
     return (
       <Root>
         <Container
