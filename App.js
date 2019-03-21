@@ -317,12 +317,22 @@ export default class App extends React.Component {
                   </CardItem>
 
                   <CardItem>
-                    <Text>Sovelluksen on kehittänyt Matias Räisänen.</Text>
+                    <Text>
+                      Sovelluksen on kehittänyt Matias Räisänen. Helsinki
+                      Thaiboxing Club ei vastaa treenikalenterisovelluksen
+                      sisällöstä.
+                    </Text>
                   </CardItem>
                   <CardItem bordered>
-                    <Text>
-                      Helsinki Thaiboxing Club ei vastaa
-                      treenikalenterisovelluksen sisällöstä.
+                    <Text
+                      style={{ color: "blue" }}
+                      onPress={() =>
+                        Linking.openURL(
+                          "http://matiasraisanen.com/htbc/htbc-policy.html"
+                        )
+                      }
+                    >
+                      Tietosuojakäytäntö
                     </Text>
                   </CardItem>
                 </Card>

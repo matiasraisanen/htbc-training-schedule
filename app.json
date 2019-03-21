@@ -4,9 +4,7 @@
     "slug": "htbc-treenikalenteri",
     "privacy": "public",
     "sdkVersion": "32.0.0",
-    "platforms": [
-      "android"
-    ],
+    "platforms": ["android"],
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/boxing-gloves.png",
@@ -18,9 +16,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
