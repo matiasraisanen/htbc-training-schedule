@@ -1,7 +1,8 @@
 import React from "react";
 import { Platform, StyleSheet, Linking, BackHandler } from "react-native";
 import * as treenilista from "./treenit.json";
-import { Font, AppLoading } from "expo";
+import { AppLoading } from "expo";
+import * as Font from "expo-font";
 import {
   Button,
   Container,
@@ -359,7 +360,7 @@ export default class App extends React.Component {
                   <CardItem>
                     <Body>
                       <Anchor
-                        href="mailto:matias.raisanen@gmail.com?subject=PALAUTE: HTBC treenikalenteri"
+                        href="mailto:palaute@matiasraisanen.com?subject=PALAUTE: HTBC treenikalenteri"
                         title="Palaute kehittäjälle"
                       />
                     </Body>
